@@ -12,7 +12,7 @@ do
 	sensors
 	echo "GPU Details"
 	nvidia-smi
-	sleep 10
+	sleep 5
 	
 
 
