@@ -156,9 +156,9 @@ test_set = test_datagen.flow_from_directory('dataset/test_set',             # Wh
 # Fit the CNN to the images which also testing the performance of the model
 classifier.fit_generator(training_set,                  # the training set
                          steps_per_epoch = 8000,        # number of images in the network
-                         epochs = 1,                   # number of epochs
+                         epochs = 1,                    # number of epochs
                          validation_data = test_set,    # test set which the testing is done
                          validation_steps = 2000)       # number of images in the test set
 
 # Save the model onto a file
-model.save("cat_dogs_net.h5")
+classifier.save("cat_dogs_net.h5")
