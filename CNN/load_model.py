@@ -9,4 +9,4 @@ new_model.summary()
 
 new_model.get_weights()
 
-new_mode.optimizer
+new_model.optimizer
