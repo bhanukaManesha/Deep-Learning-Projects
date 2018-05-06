@@ -15,9 +15,9 @@ new_model = load_model("cat_dogs_net.h5")
 new_model.summary()
 
 # Getting the image methods from keras
-from keras.preporocessing import image
+from keras.preprocessing import image
 
-test_image = image.load(image_path, target_size = (64,64))
+test_image = image.load_img(image_path, target_size = (64,64))
 
 
 test_image = image.img_to_array(test_image)
@@ -26,9 +26,11 @@ test_image = np.expand_dims(test_image, axis = 0)
 
 result = new_model.predict(test_image)
 
-new_model.class_indicies
+# print(result)
 
-if result[0][1]:
+# new_model.class_indices
+
+if result[0][0] == 1:
 	prediction = "dog"
 	print("It is a beautiful dog !!")
 else:
